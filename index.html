@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+      
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.6; overflow-x: hidden; }
+
+       header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items:center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+             }
+      .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    margin-right: auto; 
+    gap: 30px;
+      }
+nav ul li a { 
+    text-decoration: none; 
+    color: #d8d1d1; 
+    font-size: 1rem; 
+    font-weight: 300;
+    position: relative; 
+    padding: 1px ;
+    transition: color 0.2s ease;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: 0;
+    left: 50%; 
+    background: #10b981;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul li a:hover { 
+    color: #10b981; 
+}
+.active { 
+    color: #10b981 !important; 
+}
+.active::after {
+    width: 100% !important;
+}
+        .active { color: #d0d6d4 !important; font-weight: bold !important; border-bottom: 2px solid #b0c0bb; padding-bottom: 5px; }
+        .home-hero {
+            height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1) 0%, #050a08 100%);
+            padding: 0 20px;
+        }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 20px; font-weight: 700; line-height: 1.2; }
+        .hero-content h1 span { color: #10b981; }
+        .hero-content p { color: #cbd5e1; font-size: 1.4rem; max-width: 800px; margin: 0 auto 35px; font-weight: 300; }
+        
+        .btn-cta { padding: 15px 45px; border-radius: 50px; background: linear-gradient(45deg, #10b981, #059669); color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+        .btn-cta:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4); }
+
+    
+        .features-section { padding: 100px 8%; text-align: center; background-color: #08120e; }
+        .features-section h2 { font-size: 2.5rem; margin-bottom: 60px; }
+        .features-section h2 span { color: #10b981; }
+        
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .feature-box { padding: 40px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.1); transition: 0.4s; }
+        .feature-box:hover { border-color: #10b981; transform: translateY(-10px); background: rgba(16, 185, 129, 0.05); }
+        .feature-box i { font-size: 3rem; color: #10b981; margin-bottom: 25px; }
+        .feature-box h3 { font-size: 1.5rem; margin-bottom: 15px; color: #34d399; }
+        .feature-box p { color: #94a3b8; font-size: 0.95rem; }
+        .steps-section { padding: 100px 8%; text-align: center; }
+        .steps-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; margin-top: 50px; }
+        .step { flex: 1; min-width: 200px; position: relative; }
+        .step-num { font-size: 4rem; font-weight: 700; color: rgba(16, 185, 129, 0.1); position: absolute; top: -30px; left: 50%; transform: translateX(-50%); z-index: -1; }
+        .step h4 { color: #10b981; font-size: 1.3rem; margin-bottom: 10px; }
+
+        .mega-footer {
+            background: linear-gradient(to top, #020504, #050a08);
+            padding: 100px 8% 50px;
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            text-align: center;
+        }
+        .footer-brand { font-size: 3rem; font-weight: 700; margin-bottom: 15px; }
+        .footer-brand span { color: #10b981; }
+        .footer-tagline { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto 40px; }
+        .social-flex { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; }
+        .social-flex a { color: white; font-size: 2rem; transition: 0.3s; }
+        .social-flex a:hover { color: #10b981; transform: scale(1.2); }
+        .copyright { color: #64748b; font-size: 0.9rem; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="test.html">الإختبار</a></li>
+                <li><a href="booking.html">احجز الان</a></li>
+                <li><a href="tips.html">نصائح</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="home-hero">
+        <div class="hero-content">
+            <h1>لأن <span>إتزانك النفسي</span><br>هو سر قوتك</h1>
+            <p>نحن في RMSHA CLINIC نؤمن أن الصحة النفسية ليست رفاهية، بل هي الأساس الذي تبني عليه حياتك. بدأنا لنكون يد العون التي تأخذك نحو السلام الداخلي</p>
+            <a href="services.html" class="btn-cta">استكشف رحلة تعافيك</a>
+        </div>
+    </section>
+
+
+    <section class="features-section">
+        <h2>لماذا يجب عليك دخول </h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-user-shield"></i>
+                <h3>سرية مطلقة</h3>
+                <p>نحن نقدر خصوصيتك؛ كل ما يُقال داخل عيادتنا يبقى فيها بأعلى معايير الأمان المهني.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-certificate"></i>
+                <h3>نخبة الخبراء</h3>
+                <p>فريقنا يضم أطباء ومعالجين متخصصين بخبرات عالية في مختلف المجالات العلاجية.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-leaf"></i>
+                <h3>بيئة احتواء</h3>
+                <p>صممنا مساحتنا لتكون ملاذاً هادئاً يشعرك بالأمان والراحة منذ اللحظة الأولى.</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="steps-section">
+        <h2>خطواتك  نحو التغيير</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-num"></div>
+                <h4>احجز موعدك</h4>
+                <p>اختر الخدمة والوقت الذي يناسبك بكل سهولة.</p>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <h4>التقِ بطبيبك</h4>
+                <p>جلسة استماع أولية لفهم احتياجاتك وبناء خطة العلاج.</p>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <h4>ابدأ التعافي</h4>
+                <p>انطلق في رحلة التغيير واستعد توازنك النفسي.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

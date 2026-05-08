@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.8; overflow-x: hidden; }
+
+
+        header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+        .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #94a3b8; font-size: 0.95rem; transition: 0.3s; }
+        nav ul li a:hover { color: #10b981; }
+        .active { color: #10b981 !important; font-weight: bold !important; border-bottom: 2px solid #10b981; padding-bottom: 5px; }
+
+
+        .services-hero {
+            padding: 120px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top, #064e3b 0%, #050a08 100%);
+        }
+        .services-hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
+        .services-hero h1 span { color: #10b981; }
+        .services-hero p { color: #cbd5e1; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        .services-grid { padding: 40px 8% 100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.02); border-radius: 24px; padding: 50px 35px;
+            border: 1px solid rgba(16, 185, 129, 0.1); transition: 0.5s ease; text-align: right;
+            flex: 1 1 320px; max-width: 400px;
+        }
+        .service-card:hover { transform: translateY(-15px); border-color: #10b981; background: rgba(16, 185, 129, 0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+
+        .service-card i { font-size: 2.8rem; color: #10b981; margin-bottom: 25px; display: block; }
+        .service-card h3 { font-size: 1.6rem; margin-bottom: 15px; color: #34d399; font-weight: 700; }
+        
+
+        .service-card p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 30px; min-height: 90px; }
+
+        .price-box { display: inline-block; padding: 5px 15px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; color: #34d399; font-weight: bold; margin-bottom: 25px; border-right: 3px solid #10b981; }
+
+        .btn-reserve { display: block; width: 100%; padding: 14px; text-align: center; background: linear-gradient(45deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 12px; font-weight: bold; transition: 0.3s; }
+
+        .mega-footer { background: linear-gradient(to top, #020504, #050a08); padding: 100px 8% 50px; border-top: 1px solid rgba(16, 185, 129, 0.1); text-align: center; }
+        .footer-brand { font-size: 2.8rem; font-weight: 700; margin-bottom: 20px; color: white; }
+        .footer-brand span { color: #10b981; }
+        .footer-desc { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto 40px; }
+        .social-flex { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; }
+        .social-flex a { color: white; font-size: 1.8rem; transition: 0.3s; }
+        .social-flex a:hover { color: #10b981; transform: translateY(-5px); }
+        .copyright { color: #64748b; font-size: 0.85rem; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="services.html" class="active">الخدمات</a></li>
+                <li><a href="test.html">الإختبار</a></li>
+                <li><a href="booking.htm">احجز الان</a></li>
+                <li><a href="tips.html">نصائح</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-hero">
+        <h1>خدماتنا التخصصية</h1>
+        <p>نقدم لك رعاية نفسية شاملة تجمع بين الخبرة الطبية والاحتواء الإنساني، في مساحة آمنة تضمن لك الخصوصية التامة</p>
+    </div>
+
+    <section class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-feather-alt"></i>
+            <h3>استشارات فردية</h3>
+            <p>خلف الأبواب الموصدة، نصحبك في رحلة لاستكشاف مكونات النفس، وفك عقد الماضي، لنعيد معاً ترميم الإنسان وبناء غدٍ أكثر تصالحاً مع الذات.</p>
+            <div class="price-box">200 ل.س / للجلسة</div>
+            <a href="booking.html" class="btn-reserve">احجز الآن</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>علاج النزاعات</h3>
+            <p>لأن العلاقات هي مرآة أرواحنا؛ نساعدكم على تحويل ضجيج النزاعات إلى لغة مشتركة من التفاهم، لنبني جسور المودة التي أرهقتها الأيام.</p>
+            <div class="price-box">350 ل.س / للجلسة</div>
+            <a href="booking.html" class="btn-reserve">احجز الآن</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-seedling"></i>
+            <h3>دعم المراهقين</h3>
+            <p>نزرع بذور الثقة في نفوس تخوض غمار التغيير؛ نحتوي صراعات اليافعين ونوجه طاقاتهم لنصنع جيلاً متوازناً نفسياً وقادراً على مواجهة الحياة.</p>
+            <div class="price-box">250 ل.س / للجلسة</div>
+            <a href="booking.html" class="btn-reserve">احجز الآن</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-wind"></i>
+            <h3>جلسات الاسترخاء</h3>
+            <p>مساحة خاصة للتنفس بعمق؛ نستخدم أرقى تقنيات الصفاء الذهني لنحرر روحك من أعباء التوتر المتراكمة ونعيد لك توازنك المفقود.</p>
+            <div class="price-box">150 ل.س / للجلسة</div>
+            <a href="booking.html" class="btn-reserve">احجز الآن</a>
+        </div>
+    </section>
+
+</body>
+</html>

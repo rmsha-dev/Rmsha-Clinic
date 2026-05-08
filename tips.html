@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.8; overflow-x: hidden; }
+
+     
+        header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+      .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #94a3b8; font-size: 0.95rem; transition: 0.3s; }
+        nav ul li a:hover { color: #10b981; }
+        .active { color: #10b981 !important; font-weight: bold !important; }
+
+
+        .tips-hero {
+            padding: 120px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+        }
+        .tips-hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -1px; }
+        .tips-hero h1 span { color: #10b981; }
+        .tips-hero p { color: #94a3b8; font-size: 1.3rem; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+
+        .tips-container {
+            padding: 40px 8% 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 40px; 
+            padding: 60px 45px;
+            text-align: center; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+ 
+        .tip-card::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.03) 0%, transparent 60%);
+            transition: 0.6s;
+        }
+
+        .tip-card:hover {
+            background: rgba(16, 185, 129, 0.03);
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-10px);
+        }
+
+        .tip-card i {
+            font-size: 2.5rem;
+            color: #10b981;
+            margin-bottom: 35px;
+            opacity: 0.8;
+        }
+
+        .tip-card h3 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .tip-card p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .tip-tag {
+            font-size: 0.8rem;
+            color: #34d399;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(16, 185, 129, 0.2);
+            padding-top: 15px;
+            width: 50%;
+        }
+
+        .mega-footer {
+            background: linear-gradient(to top, #020504, #050a08);
+            padding: 100px 8% 50px;
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            text-align: center;
+        }
+        .footer-brand { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-brand span { color: #10b981; }
+        .copyright { color: #64748b; font-size: 0.9rem; margin-top: 30px; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+ <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="test.html">الإختبار</a></li>
+                <li><a href="booking.html">احجز الان</a></li>
+                <li><a href="tips.html" class="active">نصائح</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tips-hero">
+        <h1>مرافئ <span>السكينة</span></h1>
+        <p>نصوص كُتبت برفق، لتكون رفيقك في لحظات الضيق، ومنارتك نحو السلام الداخلي الذي تستحقه روحك</p>
+    </section>
+
+    <div class="tips-container">
+     
+        <div class="tip-card">
+            <i class="fas fa-seedling"></i>
+            <h3>فن التقبل</h3>
+            <p>أولى خطوات الشفاء هي أن تسمح لنفسك بأن لا تكون بخير. لا تقاوم الألم، بل احتضنه كجزء من رحلة نموّك؛ فالأزهار لا تنبت إلا بعد المطر</p>
+            <span class="tip-tag">رحمة بالذات</span>
+        </div>
+
+    
+        <div class="tip-card">
+            <i class="fas fa-wind"></i>
+            <h3>صمت العقل</h3>
+            <p>أفكارك ليست حقيقتك، هي مجرد سحب عابرة. خُصص لنفسك دقائق يومية من الصمت التام، لتسمع صوت روحك بعيداً عن ضجيج التوقعات</p>
+            <span class="tip-tag">تأمل واعي</span>
+        </div>
+
+        <div class="tip-card">
+            <i class="fas fa-hourglass-start"></i>
+            <h3>خطوات صغيرة</h3>
+            <p>لا يهم كم أنت بطيء في تعافيك، المهم أنك لا تزال تحاول. العثرات ليست نهاية الطريق، بل هي جزء من القصة التي ستبني قوتك غداً</p>
+            <span class="tip-tag">صمود</span>
+        </div>
+
+        <div class="tip-card">
+            <i class="fas fa-feather-alt"></i>
+            <h3>خفة الروح</h3>
+            <p>توقف عن حمل أخطاء الماضي كأثقال على ظهرك. تعلّم من الدرس، ثم اترك الحمل وارحل؛ فأنت تستحق أن تسير في هذه الحياة بخفة</p>
+            <span class="tip-tag">تحرر</span>
+        </div>
+
+   
+        <div class="tip-card">
+            <i class="fas fa-shield-heart"></i>
+            <h3>حدودك النفسية</h3>
+            <p>كلمة "لا" لكل ما يستنزف طاقتك هي في الحقيقة "نعم" كبرى لصحتك النفسية. حماية سلامك الداخلي هي أسمى درجات الوعي</p>
+            <span class="tip-tag">أمان</span>
+        </div>
+
+
+        <div class="tip-card">
+            <i class="fas fa-sun"></i>
+            <h3>أمل متجدد</h3>
+            <p>مهما بلغت شدة العاصفة، تذكر أن الشمس لم تتوقف يوماً عن الشروق. شروقك الخاص قادم، فقط استمر في الإيمان بنفسك وبقدرتك</p>
+            <span class="tip-tag">تجدد</span>
+        </div>
+
+      
+        <div class="tip-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>طلب المساعدة</h3>
+            <p>القوة ليست في تحمل كل شيء وحدك، بل في شجاعتك لقول "أحتاج للمساعدة". نحن هنا لنكون الجسر الذي يعبر بك نحو الأمان</p>
+            <span class="tip-tag">شجاعة</span>
+        </div>
+
+   
+        <div class="tip-card">
+            <i class="fas fa-anchor"></i>
+            <h3>مرساة الحاضر</h3>
+            <p>القلق هو عيش في مستقبل لم يأتِ، والحزن هو عيش في ماضٍ رحل. تعلم كيف ترسو في "الآن"؛ فالطمأنينة تسكن في هذه اللحظة</p>
+            <span class="tip-tag">حضور</span>
+        </div>
+
+ 
+        <div class="tip-card">
+            <i class="fas fa-spa"></i>
+            <h3>استراحة محارب</h3>
+            <p>أنت لا تحتاج لأن تكون منتجاً طوال الوقت. الراحة هي جزء من العمل، والسكينة هي وقودك لتكمل الطريق. أعطِ روحك حقها في الهدوء</p>
+            <span class="tip-tag">سكينة</span>
+        </div>
+    </div>
+</body>
+</html>

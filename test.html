@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+ 
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.6; overflow-x: hidden; }
+
+
+        header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+        .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #94a3b8; font-size: 0.95rem; transition: 0.3s; }
+        nav ul li a:hover { color: #10b981; }
+        .active { color: #10b981 !important; font-weight: bold !important; border-bottom: 2px solid #10b981; padding-bottom: 5px; }
+
+        .test-wrapper {
+            padding: 80px 8%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, #050a08 100%);
+        }
+
+        .test-intro { text-align: center; max-width: 700px; margin-bottom: 50px; }
+        .test-intro h1 { font-size: 3rem; margin-bottom: 20px; }
+        .test-intro h1 span { color: #10b981; }
+        .test-intro p { color: #94a3b8; font-size: 1.2rem; font-weight: 300; }
+        .white-text{color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.4);}
+
+        .quiz-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            border-radius: 30px;
+            padding: 50px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: 0.5s;
+        }
+
+        .question-text { font-size: 1.8rem; margin-bottom: 40px; color: #34d399; font-weight: 700; text-align: center; }
+
+
+        .answers-grid { display: grid; gap: 20px; }
+        .answer-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer-btn:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: #10b981;
+            color: white;
+            transform: translateX(-10px);
+        }
+        .answer-btn i { color: #10b981; opacity: 0; transition: 0.3s; }
+        .answer-btn:hover i { opacity: 1; }
+
+        .mega-footer {
+            background: linear-gradient(to top, #020504, #050a08);
+            padding: 80px 8% 40px;
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            text-align: center;
+        }
+        .footer-brand { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+        .footer-brand span { color: #10b981; }
+        .copyright { color: #64748b; font-size: 0.9rem; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+ <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="test.html" class="active">الإختبار</a></li>
+                <li><a href="booking.html">احجز الان</a></li>
+                <li><a href="tips.html">نصائح</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="test-wrapper">
+        <div class="test-intro">
+            <h1>مقياس <span>الطمأنينة</span> الذاتي</h1>
+            <p>خُذ نَفساً عميقاً.. هذا الاختبار ليس تشخيصاً طبياً، بل هو نافذة صغيرة لتفهم ما يمر به عالمك الداخلي حالياً</p>
+        </div>
+
+        <div class="quiz-card" id="quiz">
+            <div class="question-text">كيف تصف مستوى<span class="white-text">"ضجيج أفكارك"</span>خلال الأيام الماضية؟</div>
+            <div class="answers-grid">
+                <button class="answer-btn" onclick="showResult('أنت في حالة جيدة جداً، استمر في ممارسة الامتنان والهدوء.')">هادئة ومنسجمة مع واقعي <i class="fas fa-chevron-left"></i></button>
+                <button class="answer-btn" onclick="showResult('يبدو أنك تحمل بعض الأعباء، جلسة تفريغ انفعالي قد تكون حلاً رائعاً لك.')">أشعر ببعض التشويش والقلق العابر <i class="fas fa-chevron-left"></i></button>
+                <button class="answer-btn" onclick="showResult('أنت لست وحيداً، ضجيج الأفكار متعب لكننا هنا لنساعدك على ترتيبه. ننصحك باستشارة فردية.')">مزدحمة جداً لدرجة تمنعني من النوم <i class="fas fa-chevron-left"></i></button>
+                <button class="answer-btn" onclick="showResult('نحن نقدر شجاعتك في الاعتراف بهذا الشعور، رحلة الألف ميل تبدأ بخطوة.. ابدأ معنا اليوم.')">أشعر بضيق ولا أستطيع التحكم في أفكاري <i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+
+ 
+        <div id="result-box" style="display:none; text-align:center; padding:40px; border-radius:20px; background:rgba(16, 185, 129, 0.1); margin-top:30px; border:1px solid #10b981;">
+            <h2 style="color:#10b981; margin-bottom:15px;">نتيجة الاختبار</h2>
+            <p id="result-text" style="font-size:1.2rem; color:#cbd5e1; margin-bottom:20px;"></p>
+            <a href="booking.html" class="answer-btn" style="justify-content: center; background:#10b981; color:white; border:none;">احجز جلسة استشارية الآن</a>
+            <br>
+            <button onclick="location.reload()" style="background:transparent; color:#94a3b8; border:none; cursor:pointer; text-decoration:underline;">إعادة الاختبار</button>
+        </div>
+    </div>
+    <script>
+        function showResult(text) {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result-box').style.display = 'block';
+            document.getElementById('result-text').innerText = text;
+        }
+    </script>
+
+</body>
+</html>

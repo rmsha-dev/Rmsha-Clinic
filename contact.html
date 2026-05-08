@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.8; overflow-x: hidden; }
+
+  
+        header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+        .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #94a3b8; font-size: 0.95rem; transition: 0.3s; }
+        nav ul li a:hover { color: #10b981; }
+        .active { color: #10b981 !important; font-weight: bold !important; }
+
+
+        .contact-hero {
+            padding: 120px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+        }
+        .contact-hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; }
+        .contact-hero h1 span { color: #10b981; }
+        .contact-hero p { color: #cbd5e1; font-size: 1.3rem; max-width: 700px; margin: 0 auto; font-weight: 300; }
+
+ 
+        .contact-container {
+            padding: 40px 8% 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 40px;
+            padding: 60px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.5s;
+        }
+        .contact-card:hover {
+            background: rgba(16, 185, 129, 0.03);
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-10px);
+        }
+        .contact-card i { font-size: 2.5rem; color: #10b981; margin-bottom: 25px; opacity: 0.8; }
+        .contact-card h3 { font-size: 1.8rem; margin-bottom: 15px; color: #ffffff; }
+        .contact-card p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px; }
+        .contact-card a { color: #34d399; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+
+        .final-footer-note {
+            padding: 100px 8%;
+            text-align: center;
+            background: linear-gradient(to bottom, #050a08, #020504);
+        }
+        .final-footer-note p {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.2rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 40px; font-weight: 300; text-align: center;}
+  
+
+  
+        .mega-footer {
+            background-color: #14e6a0;
+            padding: 60px 8% 30px;
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            text-align: center;
+        }
+        .footer-brand { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-brand span { color: #10b981; }
+        .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+        .social-links a { color: white; font-size: 1.8rem; transition: 0.3s; }
+        .social-links a:hover { color: #10b981; transform: scale(1.2); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+ <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="test.html">الإختبار</a></li>
+                <li><a href="booking.html">احجز الان</a></li>
+                <li><a href="tips.html">نصائح</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>صوتك <span>مسموع</span> هنا</h1>
+    </section>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>اتصل بنا</h3>
+            <p>نستقبل اتصالاتكم بكل رحابة صدر</p>
+            <a href="tel:0000000090">0934760568</a>
+        </div>
+
+
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>البريد الإلكتروني</h3>
+            <p>راسلنا في أي وقت وسنجيبك فوراً</p>
+            <a href="Rama Sallal @ gmail.com">Rama Sallal @ gmail.com</a>
+        </div>
+
+
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>مقر العيادة</h3>
+            <p>حمص/شارع الغوطة </p>
+            <a href="#">عرض الموقع الجغرافي</a>
+        </div>
+    </div>
+    <section class="final-footer-note">
+        <p>"تذكر دائماً أن جروحك هي المكان الذي يدخل منه النور إليك.. لا تخشَ الظلام، فنحن هنا لنحمل المصباح معك حتى تشرق شمس روحك من جديد"</p>
+    
+        <div class="copyright">
+                                                                     جميع الحقوق محفوظة||   &copy 2026   Rama Sallal❤️
+        </div>
+        </section>
+    </footer>
+
+</body>
+</html>

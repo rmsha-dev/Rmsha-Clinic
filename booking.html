@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد | RMSHA CLINIC</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: #050a08; color: #ffffff; line-height: 1.6; }
+
+
+        header {
+            width: 100%; padding: 15px 5%; background: rgba(5, 10, 8, 0.95);
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+         .logo-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(164, 195, 185, 0.905); 
+    border: 1px solid #10b981;}
+    .logo-container { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;  
+    gap: 10px;          
+    text-decoration: none; 
+    color: white; }
+        .logo-text { font-family: sans-serif'poppins'; font-size:2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px }
+        .logo-text span { font-family:sans-serif'poppins'; font-size: 2rem; font-weight: bold;margin-right: 10px;letter-spacing: 1px; color: #1ee8a4; }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #94a3b8; font-size: 0.95rem; transition: 0.3s; }
+        nav ul li a:hover { color: #10b981; }
+        .active { color: #10b981 !important; font-weight: bold !important; border-bottom: 2px solid #10b981; padding-bottom: 5px; }
+
+    
+        .booking-wrapper {
+            padding: 80px 8%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            background: radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.05) 0%, #050a08 100%);
+        }
+
+        .booking-info { flex: 1; min-width: 300px; max-width: 500px; }
+        .booking-info h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
+        .booking-info h1 span { color: #10b981; }
+        .booking-info p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 30px; }
+
+   
+        .booking-form {
+            flex: 1.5;
+            min-width: 320px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(35, 236, 169, 0.544);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .input-group { margin-bottom: 20px; text-align: right; }
+        .input-group label { display: block; color: #34d399; margin-bottom: 8px; font-weight: bold; font-size: 0.9rem; }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background:#020504;
+            border: 1px solid rgba(187, 179, 179, 0.267);
+            border-radius: 12px;
+            color: rgba(192, 195, 194, 0.683);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            border: none;
+            border-radius: 12px;
+            color: rgb(210, 204, 204);
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            transform: translateY(-3px);
+        }
+
+
+        .mega-footer {
+            background: linear-gradient(to top, #020504, #050a08);
+            padding: 80px 8% 40px;
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            text-align: center;
+        }
+        .footer-brand { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+        .footer-brand span { color: #10b981; }
+        .copyright { color: #64748b; font-size: 0.85rem; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
+
+.input-group select option {
+    background-color: #222 !important; 
+    color: white !important; 
+}
+ 
+        select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+ <div class="logo-container">
+<div class="logo-circle">
+    <img src="rr.png" alt="Logo" style="width: 150%; height: 140%; border-radius: 90%; object-fit: cover;">
+</div>
+                        <div class="logo-text">RMSHA <span>CLINIC</span></div>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="test.html">الإختبار</a></li>
+                <li><a href="booking.html" class="active">احجز الان</a></li>
+                <li><a href="tips.html">نصائح</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-wrapper">
+        <div class="booking-info">
+            <h1>احجز <span>مساحتك</span> الآمنة</h1>
+            <p>الخطوة الأولى هي الأصعب دائماً، لكننا هنا لنضمن لك رحلة مريحة ومحاطة بالسرية والاهتمام. اختر ما يناسبك ودعنا نبدأ معاً.</p>
+            <div style="display: flex; gap: 20px; align-items: center; color: #10b981;">
+                <i class="fas fa-clock fa-2x"></i>
+                <span>- مواعيد مرنة طوال الأسبوع</span>
+            </div>
+            <br>
+            <div style="display: flex; gap: 20px; align-items: center; color: #10b981;">
+                <i class="fas fa-shield-alt fa-2x"></i>
+                <span>- خصوصية بياناتك مضمونة 100%</span>
+            </div>
+        </div>
+
+        <form class="booking-form" action="#">
+            <div class="input-group">
+                <label>الاسم الكامل:</label>
+                <input type="text" placeholder="ادخل اسمك" required>
+            </div>
+            
+            <div class="input-group">
+                <label>رقم التواصل:</label>
+                <input type="tel" placeholder="09xxxxxxxx" required>
+            </div>
+
+            <div class="input-group">
+                <label>نوع الاستشارة:</label>
+                <select required>
+                    <option value="">اختر الخدمة المطلوبة</option>
+                    <option value="">استشارة فردية (استعادة الذات)</option>
+                    <option value="">علاج أسرى وزوجي</option>
+                    <option value="">دعم اليافعين والمراهقين</option>
+                    <option value="">جلسة استرخاء وسكينة</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>تاريخ الإستشارة:</label>
+                <input type="date" required>
+            </div>
+
+            <div class="input-group">
+                <label>رسالة إضافية (اختياري):</label>
+                <textarea rows="4" placeholder="هل هناك شيء تود إخبارنا به قبل اللقاء؟"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">تأكيد طلب الحجز</button>
+        </form>
+    </section>
+</body>
+</html>
